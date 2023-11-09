@@ -28,7 +28,7 @@ export default function Home() {
         </div>
         <div className="cta-banner-wrapper">
           {/* Tombol CTA */}
-          <div className='cta-button' onClick={}>
+          <div className='cta-button'>
             <p>Halo!</p>
           </div>
           
