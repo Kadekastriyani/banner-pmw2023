@@ -1,6 +1,18 @@
+'use client'
+
+import { useState } from 'react'
 import Image from 'next/image'
 import './globals.css'
+
 export default function Home() {
+
+  const [bravo, setBravo] = useState(0)
+  const [nama, setNama] = useState('Kadek Astri Yani')
+  
+  function handlerTambahBravo() {
+    setBravo(bravo + 1)
+  }
+
   return (
     <div className='body'>
       <div className="banner-container">
@@ -22,16 +34,15 @@ export default function Home() {
             <div className="bio-nim-header-banner">
             {/* NIM dan BIO*/}
             <p>D121211035</p>
-            <p>Bravo 6, going dark</p>
+            <p>Bravo {bravo}, going dark</p>
             </div>
           </div>
         </div>
         <div className="cta-banner-wrapper">
           {/* Tombol CTA */}
-          <div className='cta-button'>
+          <div className='cta-button' onClick={handlerTambahBravo}>
             <p>Halo!</p>
           </div>
-          
         </div>
       </div>
     </div>
